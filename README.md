@@ -1,0 +1,1 @@
+https://github.com/The-Virtual-Desktop-Team/Windows-Desktop-Optimization-Tool/tree/main/Configurations/Templates

@@ -1,0 +1,213 @@
+[
+  {
+    "Name": "InstallService",
+    "OptimizationState": "Apply",
+    "URL": "",
+    "Description": "Provides infrastructure support for the Microsoft Store."
+  },
+  {
+    "Name": "autotimesvc",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support",
+    "Description": "Cellular Time service: this service sets time based on NITZ messages from a Mobile Network"
+  },
+  {
+    "Name": "BcastDVRUserService",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support",
+    "Description": "This user service is used for Game Recordings and Live Broadcasts"
+  },
+  {
+    "Name": "CrossDeviceService",
+    "OptimizationState": "Apply",
+    "Description": "Cross-Device Experience Host Service."
+  },
+  {
+    "Name": "defragsvc",
+    "OptimizationState": "Skip",
+    "Description": "Optimize drives"
+  },
+  {
+    "Name": "DevicesFlowUserSvc",
+    "OptimizationState": "Apply",
+    "Description": "Devices Flow User Service."
+  },
+  {
+    "Name": "DiagSvc",
+    "OptimizationState": "Apply",
+    "Description": "Diagnostic Execution Service"
+  },
+  {
+    "Name": "DiagTrack",
+    "OptimizationState": "Apply",
+    "Description": "Connected User Experiences and Telemetry."
+  },
+  {
+    "Name": "DPS",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/uwp/api/Windows.System.Diagnostics?view=winrt-19041",
+    "Description": "The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function."
+  },
+  {
+    "Name": "DusmSvc",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/dusm/schema-root",
+    "Description": "Data Usage service: network data usage, data limit, restrict background data, metered networks."
+  },
+  {
+    "Name": "Fax",
+    "OptimizationState": "Apply",
+    "Description": "Fax service."
+  },
+  {
+    "Name": "icssvc",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041",
+    "Description": "Windows Mobile Hotspot (tethering) service: provides the ability to share a cellular data connection with another device."
+  },
+  {
+    "Name": "LightingService",
+    "OptimizationState": "Apply",
+    "Description": "Dynamic Lighting Service."
+  },
+  {
+    "Name": "lfsvc",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Geolocation?view=winrt-19041",
+    "Description": "Geolocation Service. This service monitors the current location of the system and manages geofences (a geographical location with associated events). If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences."
+  },
+  {
+    "Name": "MapsBroker",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Maps?view=winrt-19041",
+    "Description": "Downloaded maps manager. Windows service for application access to downloaded maps."
+  },
+  {
+    "Name": "MixedRealityOpenXRSvc",
+    "OptimizationState": "Apply",
+    "Description": "Mixed Reality OpenXR Service."
+  },
+  {
+    "Name": "MessagingService",
+    "OptimizationState": "Apply",
+    "Description": "Service supporting text messaging and related functionality."
+  },
+  {
+    "Name": "NPSMSvc",
+    "OptimizationState": "Apply",
+    "Description": "NPU Power and Session Management Service."
+  },
+  {
+    "Name": "PhoneSvc",
+    "OptimizationState": "Apply",
+    "Description": "Phone Service."
+  },
+  {
+    "Name": "RetailDemo",
+    "OptimizationState": "Apply",
+    "Description": "Retail Demo Service."
+  },
+  {
+    "Name": "RmSvc",
+    "OptimizationState": "Apply",
+    "Description": "Radio Management and Airplane Mode Service."
+  },
+  {
+    "Name": "SEMgrSvc",
+    "OptimizationState": "Apply",
+    "Description": "Payments and NFC/SE Manager: manages payments and Near Field Communication (NFC) based secure elements."
+  },
+  {
+    "Name": "SharedRealitySvc",
+    "OptimizationState": "Apply",
+    "Description": "Shared Spatial Anchors Service."
+  },
+  {
+    "Name": "SmsRouter",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/routing-service",
+    "Description": "Microsoft Windows SMS Router Service: routes messages based on rules to appropriate clients.."
+  },
+  {
+    "Name": "SysMain",
+    "OptimizationState": "Apply",
+    "Description": "Maintains and improves system performance over time."
+  },
+  {
+    "Name": "VSS",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service",
+    "Description": "Volume Shadow Copy"
+  },
+  {
+    "Name": "WalletService",
+    "OptimizationState": "Apply",
+    "Description": "Wallet Service."
+  },
+  {
+    "Name": "WbioSrvc",
+    "OptimizationState": "Apply",
+    "Description": "Windows Biometric Service."
+  },
+  {
+    "Name": "WFDSConMgrSvc",
+    "OptimizationState": "Apply",
+    "Description": "Wi-Fi Direct Services Connection Manager Service."
+  },
+  {
+    "Name": "WlanSvc",
+    "OptimizationState": "Apply",
+    "Description": "WLAN AutoConfig Service."
+  },
+  {
+    "Name": "WpcMonSvc",
+    "OptimizationState": "Apply",
+    "Description": "Parental Controls Monitoring Service."
+  },
+  {
+    "Name": "WSearch",
+    "OptimizationState": "Apply",
+    "Description": "Windows Search Service."
+  },
+  {
+    "Name": "WwanSvc",
+    "OptimizationState": "Apply",
+    "Description": "WWAN AutoConfig Service."
+  },
+  {
+    "Name": "wisvc",
+    "OptimizationState": "Apply",
+    "Description": "Windows Insider Service."
+  },
+  {
+    "Name": "WdiSystemHost",
+    "OptimizationState": "Apply",
+    "Description": "Diagnostic System Host service. The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.  If this service is stopped, any diagnostics that depend on it will no longer function."
+  },
+  {
+    "Name": "WerSvc",
+    "OptimizationState": "Apply",
+    "URL": "https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting",
+    "Description": "Windows Error Reporting Service allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services."
+  },
+  {
+    "Name": "XblAuthManager",
+    "OptimizationState": "Apply",
+    "Description": "Xbox Live Auth Manager service provides authentication and authorization services for interacting with Xbox Live."
+  },
+  {
+    "Name": "XblGameSave",
+    "OptimizationState": "Apply",
+    "Description": "Xbox Live Game Save service syncs save data for Xbox Live save enabled games."
+  },
+  {
+    "Name": "XboxGipSvc",
+    "OptimizationState": "Apply",
+    "Description": "Xbox Accessory Management manages connected Xbox accessories."
+  },
+  {
+    "Name": "XboxNetApiSvc",
+    "OptimizationState": "Apply",
+    "Description": "Xbox Live Networking Service"
+  }
+]
