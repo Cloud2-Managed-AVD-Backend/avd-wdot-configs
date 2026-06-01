@@ -25,37 +25,37 @@
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\WiFiSession\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/troubleshoot/windows-client/networking/wireless-network-connectivity-issues-troubleshooting",
     "OptimizationState": "Apply",
     "Description": "Not documented, but not hard to understand.  This is another diagnostic log for the Windows Diagnostics.  If your VMs are not using Wi-Fi, this log is not needed.  You could though leave this alone as it would almost never be started unless a user started a troubleshooter, and troubleshooters are usually disabled in VDI environments."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\ReFSLog\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows-server/storage/refs/refs-overview",
     "OptimizationState": "Apply",
     "Description": "Diagnostic log for ReFS. AVD session hosts use NTFS by default, so this trace is not needed."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\Mellanox-Kernel\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/troubleshoot/azure/virtual-machines/windows/troubleshoot-windows-vm-mellanox-network-driver-crash",
     "OptimizationState": "Apply",
     "Description": "Kernel-level diagnostic trace for Mellanox InfiniBand/RDMA network adapters. AVD session hosts do not use Mellanox hardware, so this trace provides no value and adds unnecessary boot-time overhead."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\RadioMgr\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows-hardware/drivers/network/mb-radio-state",
     "OptimizationState": "Apply",
     "Description": "Radio Manager autologger tracks state changes for wireless radios (Wi-Fi, Bluetooth, mobile broadband). AVD session hosts have no physical radio hardware, making this trace entirely idle overhead."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\DiagLog\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows/win32/etw/configuring-and-starting-an-autologger-session",
     "OptimizationState": "Apply",
     "Description": "General-purpose Windows Diagnostics startup trace. Collects broad telemetry at boot for the Windows Diagnostics framework. In an AVD environment this overhead is unnecessary and the data is rarely actionable."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\CloudExperienceHostOOBE\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows-hardware/customize/desktop/customize-oobe-in-windows-11",
     "OptimizationState": "Apply",
     "Description": "Autologger for the Out-of-Box Experience (OOBE) Cloud Experience Host. AVD session hosts are configured via MDM/GPO and never go through OOBE, so this trace serves no purpose and should be disabled."
   },
@@ -67,19 +67,19 @@
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\SleepStudy\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows-hardware/design/device-experiences/modern-standby-sleepstudy",
     "OptimizationState": "Apply",
     "Description": "SleepStudy collects power-state telemetry (Connected Standby / Modern Standby analysis). Azure VMs never enter sleep or standby states, so this autologger generates no useful data and wastes disk I/O on every boot. Added in 25H2."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\UserNotPresentSession\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows-hardware/design/device-experiences/sensors-presence-sensing",
     "OptimizationState": "Apply",
     "Description": "Tracks user-absence events to inform power and lock-screen policies. In a pooled AVD environment sessions are terminated rather than left idle, so user-absence tracking has no operational value. Added in 25H2."
   },
   {
     "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\NtfsLog\\",
-    "URL": "N/A",
+    "URL": "https://learn.microsoft.com/windows-server/storage/file-server/ntfs-overview",
     "OptimizationState": "Apply",
     "Description": "Verbose NTFS filesystem diagnostic autologger. Generates significant disk I/O on every boot with detailed NTFS internals tracing. AVD hosts do not require this level of filesystem telemetry and disabling it reduces boot-time storage pressure. Added in 25H2."
   }
