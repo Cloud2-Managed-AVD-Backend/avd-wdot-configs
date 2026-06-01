@@ -1,0 +1,86 @@
+[
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\Cellcore\\",
+    "URL": "https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model",
+    "OptimizationState": "Apply",
+    "Description": "The 'Cellcore' trace has 'SMSRouter' in the trace properties."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\ReadyBoot\\",
+    "URL": "https://docs.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readyboot-analysis",
+    "OptimizationState": "Apply",
+    "Description": "ReadyBoot is boot acceleration technology that maintains an in-RAM cache used to service disk reads faster than a slower storage medium such as a disk drive. VDI does not use normal computer disk devices, but usually segments of a shared storage medium. ReadyBoot and other optimizations designed to assist normal disk devices do not have equivalent effects on shared storage devices. For non-persistent VDI, 99.999% of computer state is discarded when the user logs off, including any optimizations performed at runtime. For pooled VDI, users normally do not log into the same VM twice, so any RAM caching of predicted I/O will have unknown impact."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\WDIContextLog\\",
+    "URL": "https://docs.microsoft.com/en-us/windows-hardware/drivers/network/wifi-universal-driver-model",
+    "OptimizationState": "Apply",
+    "Description": "This is a startup trace that runs all the time, with these loggers: \"Microsoft-Windows-Kernel-PnP\":0x48000:0x4+\"Microsoft-Windows-Kernel-WDI\":0x100000000:0xff+\"Microsoft-Windows-Wininit\":0x20000:0x4+\"Microsoft-Windows-Kernel-BootDiagnostics\":0xffffffffffffffff:0x4+\"Microsoft-Windows-Kernel-Power\":0x1:0x4+\"Microsoft-Windows-Kernel-Winlogon\":0x20000:0x4+\"Microsoft-Windows-Shell-Core\":0x6000000:0x4 On my clean state VM, this trace is running and using a very small amount of resources.  Current buffers are 4, buffer size is 16.  Those numbers reflect the amount of physical RAM reserved for this trace.  Because my VM does not use WLAN, AKA 'wireless', this trace is doing nothing for my VM now, and will not as long as I do not use wireless.  Therefore the recommendation to disable this trace and free these resources."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\WiFiDriverIHVSession\\",
+    "URL": "https://docs.microsoft.com/en-us/windows-hardware/drivers/network/user-initiated-feedback-normal-mode",
+    "OptimizationState": "Apply",
+    "Description": "This log is a container for 'user-initiated feedback' for wireless networking (Wi-Fi).  If the VMs were to emulate wireless networking, you might just leave this one alone.  Also, this trace is enabled by default, but not run until triggered, presumably from a user-initiated feedback for a wireless issue.  The Windows diagnostics would run, gather some information from the current system including an event trace, and then send that information to Microsoft."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\WiFiSession\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Not documented, but not hard to understand.  This is another diagnostic log for the Windows Diagnostics.  If your VMs are not using Wi-Fi, this log is not needed.  You could though leave this alone as it would almost never be started unless a user started a troubleshooter, and troubleshooters are usually disabled in VDI environments."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\ReFSLog\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Diagnostic log for ReFS. AVD session hosts use NTFS by default, so this trace is not needed."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\Mellanox-Kernel\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Kernel-level diagnostic trace for Mellanox InfiniBand/RDMA network adapters. AVD session hosts do not use Mellanox hardware, so this trace provides no value and adds unnecessary boot-time overhead."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\RadioMgr\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Radio Manager autologger tracks state changes for wireless radios (Wi-Fi, Bluetooth, mobile broadband). AVD session hosts have no physical radio hardware, making this trace entirely idle overhead."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\DiagLog\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "General-purpose Windows Diagnostics startup trace. Collects broad telemetry at boot for the Windows Diagnostics framework. In an AVD environment this overhead is unnecessary and the data is rarely actionable."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\CloudExperienceHostOOBE\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Autologger for the Out-of-Box Experience (OOBE) Cloud Experience Host. AVD session hosts are configured via MDM/GPO and never go through OOBE, so this trace serves no purpose and should be disabled."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\WinPhoneCritical\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Critical diagnostic trace for Windows Phone / mobile device integration scenarios. AVD session hosts have no phone hardware or companion device pairing, making this trace irrelevant."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\SleepStudy\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "SleepStudy collects power-state telemetry (Connected Standby / Modern Standby analysis). Azure VMs never enter sleep or standby states, so this autologger generates no useful data and wastes disk I/O on every boot. Added in 25H2."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\UserNotPresentSession\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Tracks user-absence events to inform power and lock-screen policies. In a pooled AVD environment sessions are terminated rather than left idle, so user-absence tracking has no operational value. Added in 25H2."
+  },
+  {
+    "KeyName": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\NtfsLog\\",
+    "URL": "N/A",
+    "OptimizationState": "Apply",
+    "Description": "Verbose NTFS filesystem diagnostic autologger. Generates significant disk I/O on every boot with detailed NTFS internals tracing. AVD hosts do not require this level of filesystem telemetry and disabling it reduces boot-time storage pressure. Added in 25H2."
+  }
+]
